@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push tag to Docker Hub
-        run: docker push karpovtop/ma-status-service:latest
+        run: docker push KARPOVTOP/ma-status-service:latest
 
