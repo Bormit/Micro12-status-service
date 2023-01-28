@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Build Docker Image
-        run: docker build . --file Dockerfile -t KARPOVTOP/ma-status-service:latest
+        run: docker build . --file Dockerfile -t karpovtop/ma-status-service:latest
 
       - name: Login into Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push tag to Docker Hub
-        run: docker push KARPOVTOP/ma-status-service:latest
+        run: docker push karpovtop/ma-status-service:latest
 
