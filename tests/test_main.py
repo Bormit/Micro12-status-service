@@ -17,7 +17,7 @@ class TestStatus():
         response = requests.post(f'{api_url}/v1/orders', json=body)
         assert response.status_code == 200
         assert response.json().get('status') == 'New status'
-        assert response.json().get('listOrder') == 'Text'
+        assert response.json().get('listOrder') == 'Text test'
         assert response.json().get('id') == 0
 
     def test_get_status_by_id(self):
